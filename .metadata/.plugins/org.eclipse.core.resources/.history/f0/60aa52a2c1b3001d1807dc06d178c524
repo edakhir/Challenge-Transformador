@@ -1,0 +1,53 @@
+package cambioDivisas;
+
+import javax.swing.JOptionPane;
+
+public class objetoDivisa {
+	public static void main(String[] args) {
+		
+		classDivisa divisa=new classDivisa();
+		
+		String opcion1=(JOptionPane.showInputDialog(null,"Seleccione tipo de cambio ","Movimiento de divisas",JOptionPane.PLAIN_MESSAGE,null,new Object[] {"Dolares a moneda extranjera ","Moneda extranjera a dolares"},"selecciona")).toString();	
+		System.out.println("Intercambio de visas");
+		
+			
+		//	String animal=(JOptionPane.showInputDialog(null,"Selecciona el animal ","animales",JOptionPane.PLAIN_MESSAGE,null,new Object[] {"Selecciona","perro","vaca","gato"},"selecciona")).toString();
+			
+			String animal=(JOptionPane.showInputDialog(null,"Selecciona el animal ","animales",JOptionPane.PLAIN_MESSAGE,null,new Object[] {"Selecciona","Dólares a Libras Esterlinas","Dólares  a Yen Japonés","Dólares a Won sul-coreano"},"selecciona")).toString();
+			// JOptionPane.showMessageDialog(null,"tu animal favorito es ; " +  animal);
+			
+		
+		switch (animal) {
+	    case "1":
+	        System.out.println("1- Dólares a Euros");
+	        break;
+	    case "2":
+	    	System.out.println("2- Dólares  a Libras Esterlinas");
+	        break;
+	    case "3":
+	    	System.out.println("3-Dólares  a Yen Japonés");
+	        break;
+	    case "4":
+	    	System.out.println("4-Dólares a Won sul-coreano");
+	        break;
+	    case "5":
+	    	System.out.println("5- Convertir de Euros a dólares");
+	        break;
+	    case "6":
+	    	System.out.println("6- Convertir de Libras Esterlinas a dólares");
+	        break;
+	    case "7":
+	    	System.out.println("7- Convertir de Yen Japonés a dólares");
+	        break;
+	    case "8":
+	    	System.out.println("8- Convertir de Won sul-coreano a dólares");
+	        break;
+	    default:
+	    	System.out.println("eligio Dolar");
+	}
+
+		
+		
+	}
+}
+

@@ -1,0 +1,7 @@
+
+package cambioDivisas;
+
+public class classDivisa {
+	String moneda;
+	double valor;
+}

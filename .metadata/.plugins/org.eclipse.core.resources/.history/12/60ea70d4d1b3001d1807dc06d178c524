@@ -1,0 +1,66 @@
+package cambioDivisas;
+
+import javax.swing.JOptionPane;
+
+public class objetoMoneda {
+	public static void main(String[] args) {
+		
+		classMonedaExtranjera monedaExtranjera1 = new classMonedaExtranjera();
+		classMonedaExtranjera monedaExtranjera2 = new classMonedaExtranjera();
+		classMonedaExtranjera monedaExtranjera3 = new classMonedaExtranjera();
+		classMonedaExtranjera monedaExtranjera4 = new classMonedaExtranjera();
+		classMonedaExtranjera monedaNacional = new classMonedaExtranjera();
+		
+		monedaExtranjera1.nombre="Libras Esterlinas";
+		monedaExtranjera2.nombre="Yen Japonés";
+		monedaExtranjera3.nombre="Won sul-coreano";
+		monedaExtranjera4.nombre="Euros";
+		monedaNacional.nombre="Dolar";
+		monedaNacional.valor=10;
+		
+		String opcion1=(JOptionPane.showInputDialog(null,"Seleccione tipo de cambio ","Movimiento de divisas",JOptionPane.PLAIN_MESSAGE,null,new Object[] {"Dolares a moneda extranjera","Moneda extranjera a dolares"},"selecciona")).toString();	
+				
+		if(opcion1=="Dolares a moneda extranjera") {
+			String opcion2=(JOptionPane.showInputDialog(null,"Dolares a:","Tipo de cambio",JOptionPane.PLAIN_MESSAGE,null,new Object[] {monedaExtranjera1.nombre,monedaExtranjera2.nombre,monedaExtranjera3.nombre,monedaExtranjera4.nombre},"selecciona")).toString();
+			String cantidad2=(JOptionPane.showInputDialog(null,"Ingrese el monto"));
+			switch (opcion2) {
+		    case "Libras Esterlinas":  
+		        System.out.println( parseDouble(monedaExtranjera1.valor)* parseDouble(cantidad2));
+		        
+		        break;
+		    case "Yen Japonés":
+		    	System.out.println("2- Dólares  a Libras Esterlinas");
+		        break;
+		    case "Won sul-coreano":
+		    	System.out.println("3-Dólares  a Yen Japonés");
+		        break;
+		    case "Euros":
+		    	System.out.println("3-Dólares  a Yen Japonés");
+		        break;
+		    default:
+		    	System.out.println("eligio Dolar");
+		}
+			
+		}else {
+			String opcion3=(JOptionPane.showInputDialog(null,"Seleccione moneda extranjera","Tipo de cambio",JOptionPane.PLAIN_MESSAGE,null,new Object[] {"Euros a dólares","Esterlinas a dólares","Yen Japonés a dólares","Won sul-coreano a dólares"},"selecciona")).toString();
+			switch (opcion3) {
+		    case "Euros a dólares":
+		        System.out.println("1- Dólares a Euros");
+		        break;
+		    case "Esterlinas a dólares":
+		    	System.out.println("2- Dólares  a Libras Esterlinas");
+		        break;
+		    case "Yen Japonés a dólares":
+		    	System.out.println("3-Dólares  a Yen Japonés");
+		        break;
+		    case "Won sul-coreano a dólares":
+	    		System.out.println("3-Dólares  a Yen Japonés");
+	        break;
+			    default:
+		    	System.out.println("eligio Dolar");
+			}
+		}
+		
+	}
+}
+
