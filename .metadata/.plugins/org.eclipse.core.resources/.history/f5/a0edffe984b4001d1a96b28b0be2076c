@@ -70,9 +70,9 @@ public class objetoMoneda {
 					}
 			}
 			continuar=(JOptionPane.showInputDialog("realizar otra transaccion s/n:"));
-		}//While
+		}
 		
-	}
+	}//while
 	
 }
 
